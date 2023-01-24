@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS docker-fullstack-app-db;
+DROP DATABASE IF EXISTS myapp;
 
-CREATE DATABASE docker-fullstack-app-db;
-USE docker-fullstack-app-db;
+CREATE DATABASE myapp;
+USE myapp;
 
 CREATE TABLE lists (
   id INTEGER AUTO_INCREMENT,
