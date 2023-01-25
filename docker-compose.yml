@@ -11,7 +11,7 @@ services:
       - /app/node_modules
       - ./frontend:/app
     stdin_open: true
-    mem limit: 128m
+    mem_limit: 128m
 
   nginx:
     restart: always
@@ -22,7 +22,7 @@ services:
     container_name: app_nginx
     ports:
       - "80:80"
-    mem limit: 128m
+    mem_limit: 128m
     links:
       - frontend
       - backend
@@ -42,7 +42,7 @@ services:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: ${MYSQL_DATABASE}
       MYSQL_PORT: ${MYSQL_PORT}
-    mem limit: 128m
+    mem_limit: 128m
 
   # mysql:
   #   build: ./mysql
